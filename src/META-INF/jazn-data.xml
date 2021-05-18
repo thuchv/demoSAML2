@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8' standalone = 'yes'?>
+<jazn-data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/jazn-data.xsd">
+  <jazn-realm default="jazn.com">
+    <realm>
+      <name>jazn.com</name>
+      <roles>
+        <role>
+          <name>nextgrole</name>
+        </role>
+      </roles>
+    </realm>
+  </jazn-realm>
+  <policy-store>
+    <applications>
+      <application>
+        <name>Application38</name>
+        <jazn-policy>
+          <grant>
+            <grantee>
+              <principals>
+                <principal>
+                  <name>nextgrole</name>
+                  <class>oracle.security.jps.internal.core.principals.JpsXmlEnterpriseRoleImpl</class>
+                </principal>
+              </principals>
+            </grantee>
+            <permissions>
+              <permission>
+                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                <name>view.pageDefs.untitled1PageDef</name>
+                <actions>view</actions>
+              </permission>
+            </permissions>
+          </grant>
+        </jazn-policy>
+      </application>
+    </applications>
+  </policy-store>
+</jazn-data>
